@@ -1,0 +1,213 @@
+/* App-level styles */
+.app {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  margin: 20px;
+  color: #f1f1f1;
+  background-color: #1e1e2f;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+/* Header styles */
+.header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff6f61;
+  margin-bottom: 30px;
+}
+
+/* URL Input section */
+.url-input {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.url-input input {
+  padding: 15px;
+  font-size: 1.2rem;
+  width: 75%;
+  border: 1px solid #555;
+  border-radius: 6px;
+  outline: none;
+  background-color: #2e2e3e;
+  color: #f1f1f1;
+  transition: all 0.2s ease-in-out;
+}
+
+.url-input input:focus {
+  border-color: #ff6f61;
+  box-shadow: 0 0 8px rgba(255, 111, 97, 0.5);
+}
+
+.url-input button {
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #ff6f61;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.url-input button:hover {
+  background-color: #e65850;
+}
+
+/* Video Details section */
+.video-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.video-details img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.video-details .details {
+  text-align: left;
+}
+
+.video-details h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+/* Options Selector */
+.options-selector {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.options-selector .format,
+.options-selector .quality {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #f1f1f1;
+}
+
+.options-selector label {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.options-selector select,
+.options-selector input[type="radio"] {
+  margin-bottom: 15px;
+}
+
+.options-selector select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #555;
+  border-radius: 6px;
+  outline: none;
+  background-color: #2e2e3e;
+  color: #f1f1f1;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.options-selector select:focus {
+  border-color: #ff6f61;
+}
+
+/* Download Button */
+.download-button button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.download-button button:hover {
+  background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .url-input input {
+    width: 65%;
+  }
+
+  .video-details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .video-details img {
+    max-width: 90%;
+  }
+
+  .options-selector {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e2f; /* Dark background */
+  color: #f1f1f1; /* Light text */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Loading spinner styles */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  z-index: 1000;
+}
+
+.spinner {
+  border: 6px solid #ccc;
+  border-top: 6px solid #ff6f61; /* Spinner color */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.footer {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  color: #ccc;
+  text-align: center;
+  border-top: 1px solid #333;
+}
